@@ -1,50 +1,39 @@
 "use client";
-import { useState } from "react";
+
 import Link from "next/link";
-import { historyData } from "../data/history";
+import { useState } from "react";
 
 export default function Home() {
-  const [search, setSearch] = useState("");
-  const filteredData = historyData.filter((item) =>
-    item.title.toLowerCase().includes(search.toLowerCase())
-  );
+  const [searchQuery, setSearchQuery] = useState("");
+
   return (
-    <main className="p-6">
-      <h1 className="text-3xl font-bold mb-6">PastVerse</h1>
+    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6">
+      <h1 className="text-4xl font-bold mb-4">PastVerse</h1>
 
-      <div className="space-y-4">
-        <input
-          type="text"
-          placeholder="Buscar historia..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="w-full p-3 mb-6 rounded-xl bg-gray-800 text-white outline-none"
-          onKeyDown={(e) => {
-            if (e.key === "Enter") {
-              window.location.href = `/search/${search}`;
-            }
-          }}
-        />
-        {filteredData.map((item) => (
-          <Link key={item.id} href={`/history/${item.id}`}>
-            <div className="p-4 border rounded-xl shadow hover:bg-gray-100 cursor-pointer">
+      <p className="text-gray-400 text-center mb-8 max-w-md">
+        Explora la historia como nunca antes. Descubre eventos, civilizaciones y personajes en un formato interactivo.
+      </p>
 
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-40 object-cover rounded-xl mb-3 transition-transform duration-300 hover:scale-105"
-              />
+      {/* 🔍 Buscador */}
+      <input
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && searchQuery.trim() !== "") {
+            window.location.href = `/search/${encodeURIComponent(searchQuery)}`;
+          }
+        }}
+        placeholder="Buscar historia..."
+        className="p-3 rounded bg-gray-800 w-full max-w-sm mb-6 outline-none"
+      />
 
-              <h2 className="text-xl font-semibold">{item.title}</h2>
-              <p className="text-gray-500">{item.summary}</p>
-
-            </div>
-          </Link>
-        ))}
+      <div className="space-y-4 w-full max-w-sm">
+        <Link href="/feed">
+          <div className="p-4 bg-gray-900 rounded-xl text-center hover:bg-gray-800 cursor-pointer">
+            Explorar Feed 🚀
+          </div>
+        </Link>
       </div>
-      <a href="/feed" className="text-blue-500 underline">
-        Ir al modo exploración →
-      </a>
     </main>
   );
 }
