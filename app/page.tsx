@@ -1,13 +1,31 @@
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 import { historyData } from "../data/history";
 
 export default function Home() {
+  const [search, setSearch] = useState("");
+  const filteredData = historyData.filter((item) =>
+    item.title.toLowerCase().includes(search.toLowerCase())
+  );
   return (
     <main className="p-6">
       <h1 className="text-3xl font-bold mb-6">PastVerse</h1>
 
       <div className="space-y-4">
-        {historyData.map((item) => (
+        <input
+          type="text"
+          placeholder="Buscar historia..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full p-3 mb-6 rounded-xl bg-gray-800 text-white outline-none"
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              window.location.href = `/search/${search}`;
+            }
+          }}
+        />
+        {filteredData.map((item) => (
           <Link key={item.id} href={`/history/${item.id}`}>
             <div className="p-4 border rounded-xl shadow hover:bg-gray-100 cursor-pointer">
 
