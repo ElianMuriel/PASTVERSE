@@ -4,6 +4,7 @@ export const historyData = [
     title: "Freddie Mercury",
     type: "person",
     summary: "De cantante desconocido a leyenda del rock",
+    image: "https://d4ln1n73rozgf.cloudfront.net/prod/assets/Freddie-Mercury_SHOF_2003-Inductee.png",
     sections: [
       {
         title: "Infancia",
@@ -24,6 +25,7 @@ export const historyData = [
     title: "Segunda Guerra Mundial",
     type: "war",
     summary: "El conflicto más grande de la historia",
+    image: "https://www.centrocultural.coop/sites/www.centrocultural.coop/files/styles/imagen_blog_detalle/public/blogs/users/utopia/f.elconfidencial.com_original_f3d_9e3_a97_f3d9e3a976c8aff5ab8a1a1a0ac38bec.jpg?itok=zmM-VU0G",
     sections: [
       {
         title: "Inicio",
