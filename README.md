@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#  PastVerse
 
-## Getting Started
+**PastVerse** es una aplicación web interactiva que busca transformar la forma en que las personas exploran la historia.
 
-First, run the development server:
+En lugar de largos textos y contenido aburrido, PastVerse presenta el pasado en un formato dinámico, visual y fácil de consumir, permitiendo a los usuarios aprender de manera rápida e intuitiva.
+
+---
+
+##  Objetivo
+
+Crear una plataforma donde cualquier persona pueda:
+
+* Explorar eventos históricos
+* Conocer personajes importantes
+* Entender civilizaciones
+* Aprender sin necesidad de leer grandes bloques de texto
+
+---
+
+##  Concepto
+
+PastVerse se basa en una idea simple:
+
+> Convertir información histórica en experiencias interactivas.
+
+En futuras versiones, la aplicación incluirá:
+
+* Exploración tipo mundos (gamificación)
+* Visualización por épocas
+* Navegación inmersiva (tipo “habitaciones” o escenarios históricos)
+
+---
+
+##  Tecnologías utilizadas
+
+* **Next.js** (App Router)
+* **React**
+* **TypeScript**
+* **Tailwind CSS**
+
+---
+
+##  Estado del proyecto
+
+ MVP inicial (en desarrollo)
+
+Actualmente incluye:
+
+* Feed de historias históricas
+* Navegación dinámica por contenido
+* Vista de detalle con secciones estructuradas
+
+---
+
+##  Próximas mejoras
+
+* Búsqueda dinámica
+* Integración con APIs (Wikipedia / IA)
+* Experiencia tipo scroll (similar a TikTok)
+* Visualización interactiva (mapas, timelines)
+* Modo inmersivo con exploración por escenarios
+
+---
+
+##  Instalación
 
 ```bash
+git clone https://github.com/TU-USUARIO/pastverse.git
+cd pastverse
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir en:
+http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##  Nota
 
-## Learn More
+Este proyecto nace como una iniciativa experimental para explorar nuevas formas de aprendizaje utilizando tecnología y diseño centrado en el usuario.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+##  Autor
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Desarrollado por Elian Muriel
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
