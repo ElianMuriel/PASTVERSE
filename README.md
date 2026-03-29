@@ -65,8 +65,8 @@ Actualmente incluye:
 ##  Instalación
 
 ```bash
-git clone https://github.com/TU-USUARIO/pastverse.git
-cd pastverse
+git clone https://github.com/ElianMuriel/PASTVERSE.git
+cd PASTVERSE
 npm install
 npm run dev
 ```
